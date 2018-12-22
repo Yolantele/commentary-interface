@@ -8,6 +8,9 @@ import HorizontalDivider from './styled/HorizontalDivider';
 import VerticalDivider from './styled/VerticalDivider';
 
 const NEUTRAL = "normal moment";
+const HEIGHT = 900
+const COMMENT_WIDTH = 800
+const MOMENT_WIDTH = 300
 
 class HomePage extends React.Component {
 
@@ -21,7 +24,7 @@ class HomePage extends React.Component {
             key={index}
             description={moment.comment}
             badge={moment.time}
-            cardWidth={600}
+            cardWidth={COMMENT_WIDTH - 100}
           />
           <HorizontalDivider/>
         </div>
@@ -36,7 +39,7 @@ class HomePage extends React.Component {
             key={index}
             description={moment.type}
             badge={moment.time}
-            cardWidth={200}
+            cardWidth={MOMENT_WIDTH - 100}
           />
           <HorizontalDivider/>
         </div>
@@ -51,16 +54,16 @@ class HomePage extends React.Component {
         <div style={styles.sideBar}/>
         <FeedContainer
           title='Live commentary'
-          feedHeight={800}
-          feedWidth={800}
+          feedHeight={HEIGHT}
+          feedWidth={COMMENT_WIDTH}
         >
          {commentsFeed}
         </FeedContainer>
         <VerticalDivider/>
         <FeedContainer 
           title='Key moments'
-          feedHeight={400}
-          feedWidth={400}
+          feedHeight={HEIGHT}
+          feedWidth={MOMENT_WIDTH}
         >
           {momentsFeed}
         </FeedContainer>
