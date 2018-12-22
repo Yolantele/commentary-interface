@@ -2,8 +2,8 @@
 const FONT = 'Roboto';
 
 const COLOURS = {
-  key: "#56337f",
-  primary: "#ff214d",
+  key: "#565a87",
+  primary: "#565a87",
   lightGrey: "#F8F8F8",
   darkGrey: "#7F7F7F",
   black: "#000000",
