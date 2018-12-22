@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Button from './styled/ButtonWrapper';
+import ButtonWrapper from './styled/ButtonWrapper';
 import Styles from '../constants/styles';
 
 class HomePage extends React.Component {
@@ -21,6 +21,8 @@ const styles = {
   container: { 
     padding: 20,
     display: 'flex',
+    width: '100%',
+    height:'100%',
     justifyContent: 'space-around',
     alignItems: 'center',
     flexDirection: 'row',
