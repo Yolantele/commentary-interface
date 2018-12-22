@@ -51,7 +51,6 @@ class HomePage extends React.Component {
       <div>
         <div style={styles.header}/>
         <div style={styles.container}>
-        <div style={styles.sideBar}/>
         <FeedContainer
           title='Live commentary'
           feedHeight={HEIGHT}
@@ -68,6 +67,8 @@ class HomePage extends React.Component {
           {momentsFeed}
         </FeedContainer>
         </div>
+        <div style={styles.header}/>
+
       </div>
 
     );
@@ -76,7 +77,7 @@ class HomePage extends React.Component {
 }
 const styles = {
   container: { 
-    padding: 50,
+    padding: 30,
     display: 'flex',
     height: 900,
     justifyContent: 'flex-start',
@@ -88,9 +89,7 @@ const styles = {
     borderColor: Styles.colours.primary
   },
   header: {
-    height:100, 
-    width: '100vw', 
-    color: 'red',
+    height:200, 
     backgroundColor: Styles.colours.primary
   },
   sideBar: {

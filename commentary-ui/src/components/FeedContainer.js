@@ -10,7 +10,12 @@ class FeedContainer extends React.Component {
   const { feedHeight, feedWidth, title, width } = this.props;
 
   const container = [styles.container];
-  container.push({height: feedHeight, width: feedWidth / (feedWidth/width)});
+  if ( width ) {
+    let proportion = feedWidth / width
+    container.push({height: feedHeight, width: feedWidth / proportion});
+  } else {
+    container.push({height: feedHeight, width: feedWidth});
+  }
 
     return(
         <div style={container}>

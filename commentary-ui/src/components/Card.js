@@ -12,7 +12,12 @@ const Card = (props) => {
   const { badge, description, cardWidth, width } = props;
   const container = [styles.container];
 
-  container.push({width: cardWidth / (cardWidth / width + 0.1)});
+  if (width) {
+    let proportion = cardWidth / width + 0.2
+    container.push({width: cardWidth / proportion });
+  } else {
+    container.push({width: cardWidth});
+  }
 
 
 
