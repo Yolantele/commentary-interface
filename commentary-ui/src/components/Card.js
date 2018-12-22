@@ -13,7 +13,7 @@ const Card = (props) => {
 
   container.push({width: cardWidth});
 
-  
+
 
   return (
     <CardWrapper>

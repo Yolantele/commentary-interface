@@ -8,6 +8,7 @@ const Texts = styled.h3`
   margin-left: 1em;
   margin-right: 1em;
   font-weight: 500;
+  text-align: justify;
 `;
 
 export default Texts;

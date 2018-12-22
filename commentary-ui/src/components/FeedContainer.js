@@ -9,13 +9,12 @@ class FeedContainer extends React.Component {
 
   const { feedHeight, feedWidth, title } = this.props;
 
-  const container = [styles.container]
+  const container = [styles.container];
   container.push({height: feedHeight, width: feedWidth});
 
     return(
       <div style={container}>
         <div style={styles.header}>{title}</div>
-        {/* <div style={{height: height, width: width}}/> */}
         {this.props.children}
       </div>
     );

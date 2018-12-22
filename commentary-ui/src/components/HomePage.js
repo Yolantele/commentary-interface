@@ -1,5 +1,5 @@
 import React from 'react';
-import CardWrapper from './styled/CardWrapper';
+import Card from './Card';
 import Styles from '../constants/styles';
 import Radium from 'radium';
 
@@ -27,9 +27,12 @@ class HomePage extends React.Component {
           feedHeight={400}
           feedWidth={400}
         >
-          <CardWrapper>
-            Styled Component Test
-          </CardWrapper>
+          <Card
+            description='some text'
+            badge='21'
+            cardWidth={300}
+          >
+          </Card>
         </FeedContainer>
         </div>
       </div>
