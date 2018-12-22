@@ -1,4 +1,4 @@
-####Live Commentary
+Live Commentary
 
 
 ```
@@ -25,11 +25,14 @@ Comentary Item Object:
 
 ```
 [
-    {
-        id: 1,
-        comment: "Dier goes into the book in what is the first yellow card of the game"
-        time: "2018-12-22 13:19:20",
-        type: "yellow card" 
-    }
+  {
+    "id": 1,
+    "comment": "Dier goes into the book in what is the first yellow card of the game"
+    "time": "2018-12-22 13:19:20",
+    "type": "yellow card" 
+  }
 ]
 ```
+
+
+
