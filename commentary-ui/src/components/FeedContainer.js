@@ -1,22 +1,22 @@
 import React from 'react';
 import Styles from '../constants/styles';
 import Radium from 'radium';
-
+import withWidth from './higher-order-comp/withWIdth';
 
 class FeedContainer extends React.Component {
 
   render() {
 
-  const { feedHeight, feedWidth, title } = this.props;
+  const { feedHeight, feedWidth, title, width } = this.props;
 
   const container = [styles.container];
-  container.push({height: feedHeight, width: feedWidth});
+  container.push({height: feedHeight, width: feedWidth / (feedWidth/width)});
 
     return(
-      <div style={container}>
-        <div style={styles.header}>{title}</div>
-        {this.props.children}
-      </div>
+        <div style={container}>
+          <div style={styles.header}>{title}</div>
+          {this.props.children}
+        </div>
     );
   }
 
@@ -42,4 +42,4 @@ const styles = {
 };
 
 
-export default Radium(FeedContainer);
+export default withWidth(Radium(FeedContainer));
