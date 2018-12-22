@@ -8,7 +8,7 @@ import HorizontalDivider from './styled/HorizontalDivider';
 import VerticalDivider from './styled/VerticalDivider';
 
 const NEUTRAL = "normal moment";
-const HEIGHT = 900
+const HEIGHT = 1100
 const COMMENT_WIDTH = 800
 const MOMENT_WIDTH = 300
 
