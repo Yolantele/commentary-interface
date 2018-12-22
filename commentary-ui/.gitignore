@@ -3,6 +3,9 @@
 # dependencies
 /node_modules
 
+# dummies
+/src/components/dummies.js
+
 /.pnp
 .pnp.js
 
