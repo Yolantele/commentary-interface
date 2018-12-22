@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Button from './styled/Button';
+import Button from './styled/ButtonWrapper';
 import Styles from '../constants/styles';
 
 class HomePage extends React.Component {
@@ -8,9 +8,9 @@ class HomePage extends React.Component {
 
     return(
       <div style={styles.container}>
-        <Button>
-          Stled Component Test
-        </Button>
+        <ButtonWrapper>
+          Styled Component Test
+        </ButtonWrapper>
       </div>
 
     );
@@ -24,7 +24,8 @@ const styles = {
     justifyContent: 'space-around',
     alignItems: 'center',
     flexDirection: 'row',
-    fontFamily: Styles.font
+    fontFamily: Styles.font,
+    backgroundColor: Styles.colours.key,
   }
 }
 

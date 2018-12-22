@@ -3,6 +3,7 @@ const FONT = 'Roboto';
 
 const COLOURS = {
   primary: "palevioletred",
+  key: "#351254",
 
   lightGrey: "#F8F8F8",
   darkGrey: "#7F7F7F",
@@ -12,5 +13,6 @@ const COLOURS = {
 }
 
 module.exports = {
- font: FONT
+ font: FONT,
+ colours: COLOURS
 };
