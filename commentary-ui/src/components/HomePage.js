@@ -2,12 +2,47 @@ import React from 'react';
 import Card from './Card';
 import Styles from '../constants/styles';
 import Radium from 'radium';
+import commentary from '../commentaryData';
+import FeedContainer from './FeedContainer';
+import HorizontalDivider from './styled/HorizontalDivider';
+import VerticalDivider from './styled/VerticalDivider';
 
-import FeedContainer from './FeedContainer'
+const NEUTRAL = "normal moment";
 
 class HomePage extends React.Component {
 
+
+  
   render() {
+    let commentsFeed = commentary.map((moment, index) => {
+      return (
+        <div>
+          <Card
+            key={index}
+            description={moment.comment}
+            badge={moment.time}
+            cardWidth={600}
+          />
+          <HorizontalDivider/>
+        </div>
+      )
+    });
+
+    let momentsFeed = commentary.map( (moment, index) => {
+      if (moment.type !== NEUTRAL) {
+        return (
+        <div>
+          <Card
+            key={index}
+            description={moment.type}
+            badge={moment.time}
+            cardWidth={200}
+          />
+          <HorizontalDivider/>
+        </div>
+        )
+      } else return null
+    });
 
     return(
       <div>
@@ -19,20 +54,15 @@ class HomePage extends React.Component {
           feedHeight={800}
           feedWidth={800}
         >
-         'testing children'
+         {commentsFeed}
         </FeedContainer>
-        <div style={styles.verticalDivider}/>
+        <VerticalDivider/>
         <FeedContainer 
           title='Key moments'
           feedHeight={400}
           feedWidth={400}
         >
-          <Card
-            description='some text'
-            badge='21'
-            cardWidth={300}
-          >
-          </Card>
+          {momentsFeed}
         </FeedContainer>
         </div>
       </div>
@@ -64,10 +94,6 @@ const styles = {
     width: 150,
 
   },
-  verticalDivider: {
-    paddingLeft: 10,
-    paddingRight: 10,
-  }
 }
 
 export default Radium(HomePage);
