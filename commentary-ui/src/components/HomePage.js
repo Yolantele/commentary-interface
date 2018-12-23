@@ -16,37 +16,43 @@ class HomePage extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-      selectedComment: null
-    }
+      selectedTab: null
+    };
     this.handleClick = this.handleClick.bind(this);
   }
 
-
-  handleClick (item) {
-    console.log('Clicked!!' + item.id);
+  handleClick (moment) {
+    this.setState({
+      selectedTab: moment.id
+    });
   }
 
-
-  render() {
-    let commentsFeed = commentary.map((moment, index) => {
+  onRemountCommentTabs(){
+    let commentsFeed = commentary.map((comment) => {
       return (
-          
-        <div>
+        <div style={comment.id === this.state.selectedTab? {borderLeft: `2px solid red`} : {}}>
           <Card
-            key={moment.id + 'comment'}
-            description={moment.comment}
-            badge={moment.time}
+            key={comment.id + 'comment'}
+            description={comment.comment}
+            badge={comment.time}
             cardWidth={COMMENT_WIDTH - 100}
           />
           <HorizontalDivider/>
         </div>
       )
     });
+    return commentsFeed
+  }
 
-    let momentsFeed = commentary.map( (moment, index) => {
+
+  render() {
+
+    let commentsFeed = this.onRemountCommentTabs();
+    let momentsFeed = commentary.map( (moment) => {
+      
       if (moment.type !== NEUTRAL) {
         return (
-        <div onClick={(moment) => {this.handleClick(moment)}}>
+        <div onClick={() => {this.handleClick(moment)}}>
           <Card
             key={moment.id + 'momment'}
             description={moment.type}
@@ -90,7 +96,7 @@ const styles = {
   container: { 
     padding: 30,
     display: 'flex',
-    height: 900,
+    height: 1300,
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
     flexDirection: 'row',
@@ -105,8 +111,10 @@ const styles = {
   },
   sideBar: {
     width: 150,
-
   },
+  selected: {
+
+  }
 }
 
 export default Radium(HomePage);
