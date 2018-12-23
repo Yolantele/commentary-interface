@@ -49,12 +49,18 @@ comments and moments feeds change their width and space-between accordingly:
 To run the project:
 
 1. clone this repo to your computer via terminal: 
-``` git clone https://github.com/Yolantele/commentary-interface-kata.git```
+
+```
+ git clone https://github.com/Yolantele/commentary-interface-kata.git
+```
 
 2. Make sure to go to 'commentary-ui' folder - as this is where you will need to install and run project.
 
 3. locally from 'commentary-ui' folder run these commands:
-``` npm i ```
+
+```
+ npm i
+```
 
 once everything is installed run this commant, it should open browser with the main page ready, 
 
