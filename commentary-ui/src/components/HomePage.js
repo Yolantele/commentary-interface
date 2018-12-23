@@ -87,7 +87,6 @@ class HomePage extends React.Component {
         </div>
         <div style={styles.header}/>
       </div>
-
     );
   }
 
@@ -113,7 +112,6 @@ const styles = {
     width: 150,
   },
   selected: {
-
   }
 }
 

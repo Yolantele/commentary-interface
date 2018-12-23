@@ -16,7 +16,7 @@ const withWidth = (MyComponent, proportion=REDUCE_IN_PROPORTION) => {
     componentDidMount() {
       if (window) {
         window.addEventListener('resize', this.handleResize);
-        this.handleResize()
+        this.handleResize();
       }
     }
     

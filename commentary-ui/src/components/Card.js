@@ -13,7 +13,7 @@ const Card = (props) => {
   const container = [styles.container];
 
   if (width) {
-    let proportion = cardWidth / width + 0.2
+    let proportion = cardWidth / width + 0.2;
     container.push({width: cardWidth / proportion });
   } else {
     container.push({width: cardWidth});

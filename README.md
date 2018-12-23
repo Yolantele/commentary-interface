@@ -21,27 +21,26 @@ So that I know what actually happened at that moment
 
 a day of on-and-off (inbetween Christmass prep :) )  work
 
-Comentary Item Object: 
+Comentary Item dummy-objects: 
 
 ```
 [
   {
     "id": 1,
     "comment": "Dier goes into the book in what is the first yellow card of the game"
-    "time": "2018-12-22 13:19:20",
+    "time": "20",
     "type": "yellow card" 
   }
 ]
 ```
 
+Features: 
+- UI is responsive to browser dimensions changes
+- UI responds to Users interaction with key moments by  highlighting the corresponding commentary
 
-responsive to browser dimensions change: 
-
-comments and moments feeds change their width and space-between accordingly:
 
 ![screenshot 2018-12-23 at 01 31 11](https://user-images.githubusercontent.com/30931242/50380004-b9744300-0652-11e9-9f7d-2a1fe1e55b6c.png)
 
-(also, user's chosen key moment highlights the commentary)
 
 ![screenshot 2018-12-23 at 01 31 53](https://user-images.githubusercontent.com/30931242/50380017-0821dd00-0653-11e9-8895-9b78731925a3.png)
 
@@ -64,5 +63,25 @@ To run the project:
 
 once everything is installed run this commant, it should open browser with the main page ready, 
 
-``` npm run start```
+``` 
+npm run start
+```
 
+Next Steps would be:
+
+some key steps:
+- test key componets using jest
+
+-set up linter to ensure formatting is uniformal 
+
+feature steps:
+
+- Improve some formatting responsiveness, specifically - newsfeeds scrollability, height and the taking into account how many coments are displayed
+
+- extract reusable component , specifically the comments/moments renderers to follow more of the declarative component style
+
+- Improve user interaction with onHover functions, loading icons etc.
+
+- introduce 'timeline' graphics and moment-type icons to further illustrate the timeline of moments
+
+- and so much more !

@@ -18,10 +18,10 @@ class FeedContainer extends React.Component {
   }
 
     return(
-        <div style={container}>
-          <div style={styles.header}>{title}</div>
-          {this.props.children}
-        </div>
+      <div style={container}>
+        <div style={styles.header}>{title}</div>
+        {this.props.children}
+      </div>
     );
   }
 
