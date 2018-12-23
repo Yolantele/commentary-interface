@@ -11,7 +11,7 @@ class FeedContainer extends React.Component {
 
   const container = [styles.container];
   if ( width ) {
-    let proportion = feedWidth / width
+    let proportion = feedWidth / width;
     container.push({height: feedHeight, width: feedWidth / proportion});
   } else {
     container.push({height: feedHeight, width: feedWidth});

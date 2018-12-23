@@ -8,20 +8,32 @@ import HorizontalDivider from './styled/HorizontalDivider';
 import VerticalDivider from './styled/VerticalDivider';
 
 const NEUTRAL = "normal moment";
-const HEIGHT = 1100
-const COMMENT_WIDTH = 800
-const MOMENT_WIDTH = 300
+const HEIGHT = 1100;
+const COMMENT_WIDTH = 800;
+const MOMENT_WIDTH = 300;
 
 class HomePage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { 
+      selectedComment: null
+    }
+    this.handleClick = this.handleClick.bind(this);
+  }
 
 
-  
+  handleClick (item) {
+    console.log('Clicked!!' + item.id);
+  }
+
+
   render() {
     let commentsFeed = commentary.map((moment, index) => {
       return (
+          
         <div>
           <Card
-            key={index}
+            key={moment.id + 'comment'}
             description={moment.comment}
             badge={moment.time}
             cardWidth={COMMENT_WIDTH - 100}
@@ -34,9 +46,9 @@ class HomePage extends React.Component {
     let momentsFeed = commentary.map( (moment, index) => {
       if (moment.type !== NEUTRAL) {
         return (
-        <div>
+        <div onClick={(moment) => {this.handleClick(moment)}}>
           <Card
-            key={index}
+            key={moment.id + 'momment'}
             description={moment.type}
             badge={moment.time}
             cardWidth={MOMENT_WIDTH - 100}
@@ -68,7 +80,6 @@ class HomePage extends React.Component {
         </FeedContainer>
         </div>
         <div style={styles.header}/>
-
       </div>
 
     );
