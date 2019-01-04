@@ -1,10 +1,11 @@
 import React from 'react';
-import Styles from '../constants/styles';
+import Styles from '../../constants/styles';
 import Radium from 'radium';
-import withWidth from './higher-order-comp/withWIdth';
+import withWidth from '../higher-order-comp/withWIdth';
 
 class FeedContainer extends React.Component {
-
+  
+ //this is where the fetching of data would take place if it was comming from an API 
   render() {
 
   const { feedHeight, feedWidth, title, width } = this.props;

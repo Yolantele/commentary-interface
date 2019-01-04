@@ -1,16 +1,18 @@
 import React from 'react';
-import Card from './Card';
-import Styles from '../constants/styles';
+import Card from '../Card';
+import Styles from '../../constants/styles';
 import Radium from 'radium';
-import commentary from '../commentaryData';
-import FeedContainer from './FeedContainer';
-import HorizontalDivider from './styled/HorizontalDivider';
-import VerticalDivider from './styled/VerticalDivider';
+import commentary from '../../commentaryData';
+import FeedContainer from '../containers/FeedContainer';
+import HorizontalDivider from '../styled/HorizontalDivider';
+import VerticalDivider from '../styled/VerticalDivider';
 
 const NEUTRAL = "normal moment";
 const HEIGHT = 1100;
 const COMMENT_WIDTH = 800;
 const MOMENT_WIDTH = 300;
+// - extract comments feed and moments feed into functional(presentational) feedRenderer
+// - use react-grid to better control scrollability and comments feed navigation
 
 class HomePage extends React.Component {
   constructor(props) {
